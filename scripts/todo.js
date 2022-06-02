@@ -52,4 +52,7 @@ $('#data').on('click', '.btnSave', function () {
 
 });
 
+$('#data').on('click', '.btnCancel', function () { 
+    $(this).parent().parent().remove();
+});
  
