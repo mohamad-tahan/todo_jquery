@@ -12,7 +12,7 @@ emptyNewRow = emptyNewRow + "<td class='tdIsDone'><input type='checkbox' class='
 
 emptyNewRow = emptyNewRow + "<td class='tdCreatedAt'><input type='datetime-local' class='txtCreatedAt' placeholder='Enter CreatedAt'/></td>";
 
-emptyNewRow = emptyNewRow + "<td class='tdAction'><button>Save</button> <button>Cancel</button> </td></tr>";
+emptyNewRow = emptyNewRow + "<td class='tdAction'><button class='btnSave'>Save</button> <button class='btnCancel'>Cancel</button> </td></tr>";
 
 
 $("#btnAdd").click(function () { 
@@ -24,3 +24,29 @@ $("#btnAdd").click(function () {
     $("#data tbody").append(emptyNewRow); 
 });
 
+// Saving inputs into table
+$('#data').on('click', '.btnSave', function () {
+    const id =  $("#data tbody").children().length;
+    $(this).parent().parent().find(".tdID").html(""+id+"");
+
+    const title =  $(this).parent().parent().find(".txtTitle").val();
+    $(this).parent().parent().find(".tdTitle").html(""+title+""); 
+
+    const description =  $(this).parent().parent().find(".txtDescription").val();
+    $(this).parent().parent().find(".tdDescription").html(""+description+"");  
+
+    const point =  $(this).parent().parent().find(".txtPoint").val();
+    $(this).parent().parent().find(".tdPoint").html(""+point+"");
+
+    const isdone =  $(this).parent().parent().find(".txtIsDone").val();
+    $(this).parent().parent().find(".tdIsDone").html(""+isdone+"");
+
+    const createdat =  $(this).parent().parent().find(".txtCreatedAt").val();
+    $(this).parent().parent().find(".tdCreatedAt").html(""+createdat+"");
+
+;
+
+   
+
+});
+ 
