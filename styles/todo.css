@@ -21,7 +21,7 @@ table {
       color: darkslategray;
   }
 
-  #btnAdd:hover,  #btnClear:hover {
+  #btnAdd:hover,  #btnClear:hover, #btnSearch:hover {
     background-color: #9d9eab;
   }
   
