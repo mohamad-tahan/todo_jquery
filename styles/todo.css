@@ -21,6 +21,9 @@ table {
       color: darkslategray;
   }
 
+  #btnAdd:hover,  #btnClear:hover {
+    background-color: #9d9eab;
+  }
   
 
 #btnAdd{
@@ -28,7 +31,7 @@ table {
       background-color: green;
       color: white;
       padding: 10px;
-     
+      cursor: pointer;
       border: none;
       border-radius: 5px;
       padding: 10px;
@@ -44,7 +47,7 @@ table {
     background-color: red;
     color: white;
     padding: 10px;
-  
+    cursor: pointer;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -61,7 +64,28 @@ table {
     align-items: center;
     padding: 10px;
   }
-
+.search{
+  
+   text-align:end;
+    
+    
+}
+#btnSearch{
+  
+    background-color: rgb(204, 161, 7);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+    margin:15px
+    
+    
+}
  
   @media only screen and (max-width: 600px) {
     table{
