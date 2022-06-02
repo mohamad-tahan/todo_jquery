@@ -48,7 +48,7 @@ $('#data').on('click', '.btnSave', function () {
     console.log(isdone);
     
 
-    //changind background color 
+    //changing background color 
     if(isdone === "Yes"){
         $(this).parent().parent().find(".tdID").css("backgroundColor", "gray");
         $(this).parent().parent().find(".tdTitle").css("backgroundColor", "gray");
@@ -121,4 +121,9 @@ $( "#btnSearch" ).click(function(){
     });
     $("#result").text(matches + " matches found.");
     $("#searchText").val("");
+});
+
+//Clearing all rows
+$( "#btnClear" ).click(function(){
+    $("#data tbody").html("");
 });
