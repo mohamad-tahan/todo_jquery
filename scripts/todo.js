@@ -15,6 +15,10 @@ emptyNewRow = emptyNewRow + "<td class='tdCreatedAt'><input type='datetime-local
 emptyNewRow = emptyNewRow + "<td class='tdAction'><button class='btnSave'>Save</button> <button class='btnCancel'>Cancel</button> </td></tr>";
 
 
+var editDeleteButtons ="<button class='btnEdit'>Edit</button> <button class='btnDelete'>Delete</button> ";
+
+
+
 $("#btnAdd").click(function () { 
     if ($("#data tbody").children().children().length == 1) {
         $("#data tbody").html("");
@@ -44,9 +48,8 @@ $('#data').on('click', '.btnSave', function () {
     const createdat =  $(this).parent().parent().find(".txtCreatedAt").val();
     $(this).parent().parent().find(".tdCreatedAt").html(""+createdat+"");
 
-;
-
-   
+    $(this).parent().parent().find(".tdAction").html(editDeleteButtons);
 
 });
+
  
