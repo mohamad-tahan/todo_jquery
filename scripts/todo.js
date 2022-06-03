@@ -31,8 +31,8 @@ $("#btnAdd").click(function () {
 
 // Saving inputs into table
 $('#data').on('click', '.btnSave', function () {
-    const id =  $("#data tbody").children().length;
-    $(this).parent().parent().find(".tdID").html((Math.floor(Math.random() * 1000)));
+    const id =  (Math.floor(Math.random() * 1000));
+    $(this).parent().parent().find(".tdID").html(id);
 
     const title =  $(this).parent().parent().find(".txtTitle").val();
     $(this).parent().parent().find(".tdTitle").html(title); 
